@@ -1,0 +1,30 @@
+.caixa {
+    position: relative;
+    background: lightblue;
+    width: 940px;
+    margin: 0 auto;
+    align-items: center;
+
+}
+.caixa .logo{
+    margin: 20px;
+}
+nav ul {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+
+}
+
+a {
+    text-transform: uppercase;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}

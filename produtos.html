@@ -1,0 +1,116 @@
+<!-- --------------------CURSO HTML5 CSS3 part:2----
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Produtos - Barbearia Alura</title>
+        <link rel="stylesheet" href="reset.css"><!--Essa ordem é importante. pois reseta antes do nosso css ser escrito-->
+        <link rel="stylesheet " href="style.css">
+    </head>
+    <body>
+        <!-- a imagem é o conteúdo mais importante dessa segunda pag por isso é marcada com h1-->
+        <header>
+            <div class="caixa">
+                <h1><img src="logo.png"></h1>    
+                <nav>
+                    <ul><!--ul para listas não ordenadas-->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <ul class="produtos">
+                <li>
+                    <h2>Cabelo</h2>
+                    <img src="cabelo.jpg" alt="">
+                    <p class="produto-descricao">Na tesoura ou máquina, como o cliente preferir</p>
+                    <p class="produto-preco">R$ 25,00</p>
+                </li>
+                <li>
+                    <h2>Barba</h2>
+                    <img src="barba.jpg" alt="">
+                    <p class="produto-descricao">Corte desenho profissional de barba</p>
+                    <p class="produto-preco">R$ 18,00</p>
+                </li>
+                <li>
+                    <h2>Cabelo + Barba</h2>
+                    <img src="cabelo+barba.jpg" alt="">
+                    <p class="produto-descricao">Pacote completo de cabelo e barba</p>
+                    <p class="produto-preco">R$ 35,00</p>
+                </li>
+
+            </ul>
+        </main>
+        <footer class="copyright">
+            <img src="logo-branco.png" alt="">
+            <p> &copy; Copyright Barbearia Alura - 2019</p>
+        </footer>
+        
+    </body>
+    <a href="https://cursos.alura.com.br/dashboard">Login Alura</a>
+    <br>
+    <a href="https://www.treinaweb.com.br/blog/css-definindo-o-calculo-de-dimensoes-com-box-sizing#:~:text=O%20box%2Dsizing%20com%20o,total%20do%20elemento%20ser%C3%A1%20150px.">Artigo sobre box-size e outros interssantes</a>
+</html>
+<!---=======================================-CURSO HTML5 CSS3 part:2==========================================---->
+
+<!-- --------------------------    CAPITULO 1: Criando nova pagina   --------------------------------------------------------->
+
+<!-- Foi criado o arquivo produtos.html para inicia a nova folha de produtor e o arquivo .css para estilizar essa nova pagina conectando a duas via link no head.
+feita estrutura básica do html criamos um cabeçalho adcionado uma imagem de logo marcada com h1, o principal elemento dessa nova pag e uma lista não ordenada com ancoras de link`s. -->
+
+<!-- ------------------------------------   CAPITULO2: Navegação entre paginas    --------------------------------------->
+
+<!-- A dica é 1º criar a estrutura html e depois estilizar.
+A lista é o nosso menu e para posiciona-los lado a lado existem varias formas, devemos mecher no display juntando o inline 'bloquei toda a linha mesmo o conteudo não ocupando todo espaço' que está na imagem. Com block 'Não permite alterar suas dimenções' que está na lista.
+Para colocar o menu com lestras maiusculas poderia ser feito direto no html mas não é o correto. podemos fazer isso visualmente com css.
+estilizando o menu, agora vamos usar o recurso do reset css para eliminar as bordas indesejadas padrao do navegador-->
+
+<!-- --------------------CAPITULO 3: Posicionamento dos elementos------>
+
+<!--Limpando o navegador com reset css, ele deveser lincado no head logo acima do link de estilização se colocarmos abaixo ele vai limpar a nossa estilização. entendendo o posição, ele tem como propriedade o [static] que já é o padrão,[stick],[fixed],[relative] e [absolute].
+    como o posicionamento padrao e relative e mantem o ponto onde foi criado e deslocar em px a unidade digitada mas ainta estara pregago no mesmo lugar em que foi criado. No absolute e desaprega de seu ponto original mas presisa de uma referencia que pode ser o div com seu posionamento relative ou na sua ausencia sera  a propria pagina sua referencia.
+-->
+
+<!-- --------------CAPITULO 4: A tag secction------>
+
+<!--Concluido o cabeçalho vamos para o criação do produtos da pagina para isso usamos a tag semantica main a qual contem o conteudo principal e nela uma lista não ordenada para os itens e fazemos sua descrição. uma lista e seus items é do tipo block ou seja bloqueia a linha mesmo não ocupando ela toda, quebra-se isso colocando um display inline-block para todos os itens da lista. para centralizar os itens é preciso que ele tem que está em volvido nunha caixa que no caso por se tratar de uma lista já está: pela tag ul, para especifidcar essa lista e estilizar apenas ela adicionamos a ela uma class= produtos, e sua largura de 940px. Centralizamos os itens adicionando uma largura de igual para todos, dividimos os 940px por 3 itens de for dinamica de forma que se adicionar mais itens a mesma lista ele se enquadre automaticamente. Fazemos isso com porcetagem, tipo 100% = 1/3 da pagina que dividido por 30% igual a 3 itens para cada linha. O passo seguinte é centrallizar os itens pelo topo, por padrao as lista sao alinhadas pela base usamos o vertia-align. Agora para um suspiro nos elemento devemos usar o padding "espaçamento interno" encima e embaixo para isso aplicomos padding na lista "produto" que cascatear para dotos os itens. melhoarando a estilo da fonte. E muito importante fazer e textar a seu codigo a cada linha pois assim vc sabe mais em qual parte errou identificando mais rápido.Agora é a hora de estilizar os paragrafos mas como são 2 <p> adicionamos classes uma para cada p e agora é só estilizar no css. proxima aula mechemos nos espaçamentos margin e padding.
+    Mecheremos agora nos espaçamento dos elmentos e dos itens, para visualizar melhor aplicamos cinza no bacground. vamos separar os elementos das laterais da pagina com espaco de margin 1,5% para cada lado, sendo ambos = 3% mais os 30% de itens temos 99% de espçao acupado na largura de 940px. o proxímo passo é adicionar um padding pois o 1º item está com o texto colado na borda isso vai afasta-lo, porém desconfigurou a pag tevido o todos os elementos terem aumentado,pois agora o elemento tem 30% + 20px  de largura para cada lado adicionada pelo padding, isso aconteceu por que misturamos % com px o que é muito comum e para resolver isso usamos a propriedade box-size:border-box o que faz com que o navegador entenda que o elemento tem apenas os 30% fixos e o padding seja adcionadio como espaço interno. 
+    Nesta aula, aprendemos:
+
+A tag main, para o conteúdo principal da nossa página
+A criar listas complexas, com títulos, imagens e parágrafos
+A utilizar o inline-block
+A praticar e estilizar o conteúdo principal da nossa página
+
+-->
+<!-- --------------CAPITULO 5: Lidando com bordas------>
+<!-- Os elementos são composto por caixas sendo de dentro pra fora a principal que é exibida com o conteúdo, depois vem a caixa do padding, seguida pela border, por  ultimo e caix do margin. Na caiza border existe 3 caracteristicas que são: tamanho , tipo e cor. declaramos dessa forma no css: border: tamanho da linha "px" tipo "solid" cor "cor" todos os elemento tem bordas. È possível arredodar as bordas dos elementos com css bastando declarar border-radius: tamanho e qual borda se quer alterar. Melhore os elementos com bordas arredodadas "border-radius" -->
+
+<!-- --------------------CAPITULO 6: Pseudo classes----->
+<!--Interação do movimento do mouse pelo navergador,configurando os links do header, auterando a cor e underline ao passar o mouse sobre o link, fazemos isso com pseudo elementos o hover. configurando agora a exibição dos itens como o pseudo elemento fazendo tracar de cor da borda e com a active ao clicar nos elementos também podemos auterar suas propriedades. Podemo auterar outro elemento atraves do elemeneto pai, lendo a declaração da direita para a esquerda temos .produtos li:hover h2 sendo Quando o h2 estivercom mouse por cima do li dos produtos fassa isso= propriedades.
+Nesta aula, aprendemos:
+
+Algumas pseudo-classes CSS
+hover, quando o usuário passa o cursor sobre o elemento
+active, quando um elemento está sendo ativado pelo usuário
+A mudar a cor do texto e/ou da borda de um elemento, quando o usuário passar o cursor sobre o mesmo
+A mudar a cor da borda de um elemento, quando o mesmo estiver sendo ativado pelo usuário. 
+
+Nesta aula, aprendemos:
+
+Algumas pseudo-classes CSS
+hover, quando o usuário passa o cursor sobre o elemento
+active, quando um elemento está sendo ativado pelo usuário
+A mudar a cor do texto e/ou da borda de um elemento, quando o usuário passar o cursor sobre o mesmo
+A mudar a cor da borda de um elemento, quando o mesmo estiver sendo ativado pelo usuário-->
+
+
+
+<!-- --------------------CAPITULO 7: Finalizando a pagina produtos ----
+--> 
+<!--Criando o roda pé da pagina com a tag footer, com uma imagem de logo e um texto informativo. A imagem será adicionada usando o css com background: url("endereço"). botamos um margin pra cima de 20px para afastar mais um pouco a margem esterna superior, dimuie a tamanaho da letra para 13px e agora vamos adicionar o simbolo do copyrigth usando uma linguagem unicode para importar o simbolo. desquisando e adicionando o simbolo unicode no footer ---->
+

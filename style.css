@@ -1,0 +1,281 @@
+body {
+    font-family: 'Montserrat', sans-serif; /*Adiconamos a font motserrat e a sans-serif como segunda opção pra todo o conteudo do texto.*/
+}
+
+header {
+    background: #bbbbbb;
+    padding:20px 0;/* Coloca uma margem top e bottom para afastar os elementos dessas bordas*/
+}
+
+/* Envolve o logo e o menu, sendo relativo para o referenciar o position absolute da listga */
+.caixa {
+    position: relative;/*Faz o elemento absolute ficar aqui dentro*/
+    width: 940px;/*Tamanho fixo, porém menor que a tela*/
+    margin: 0 auto;/*dividindo a resto do espaço acima em partes iguais para ambos os lados.*/
+}
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+/* nav de navegação tag criada para envolver o menu e com isso tirar a propriedade block da lista para inlne no css */
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;/* margem entre os itens do menu*/
+}
+/**/
+nav a {
+    text-transform: uppercase;/*tranformando do menu em maiúsculo*/
+    color: #000000;
+    font-weight: bold;/*Aplica o negrito*/
+    font-size: 22px;/*Tamanho da font*/
+    text-decoration: none;/*Retira o underline do link*/
+    text-decoration: underline;
+}
+
+nav a:hover {
+    color: #c78c19;
+}
+
+.produtos {
+    width: 940px;/*definindo uma caixa de fundo para comportar a lista com os itens*/
+    margin: 0 auto;/*centralizando a caixa com as medidas left e rigth automaticas*/
+    padding:50px 0;/* 20px de espaço interno para o conteudo separar da borda "caixa" do elemento */
+}
+.produtos li {
+    display: inline-block;/*Serve para colocar o itens da lista lado a lado quebrando o block da lista*/
+    text-align: center;/*Cendtraliza o texto dos itens*/
+    width: 30%; /* essa % define o tamanho de todos os itens, deifando iguais. dessas forma ele é calculado automaticamente pelo navegador tendo como base o espaço defino pela caixa que os comporta: 'produtos{ largura de 940px }'*/
+    vertical-align: top;/*alinha os itens por cima*/
+    /*background: #cccccc;/*Cor de fundo cinza para analizar o comportamento dos elementos na configuração dos espaçamentos*/
+    margin: 0 1.5%;/*margem externa 0 pra cima e baixo com 1,5 para as laterais.*/
+    padding: 30px 20px;/*espaço interno do elemento*/
+    box-sizing: border-box;/*retira da soma da largura do elemento, o padding adicionado acima*/
+    border: 5px solid #000000;
+    border-radius: 10px;
+
+}
+
+/*Autera a cor das bordas dos itens quando o mouse passar por cima deles.*/
+.produtos li:hover {
+    border-color: #c78c19;
+}
+
+/*O active autera as propriedades dos elementos com eles são clicados pelo usuario.*/
+.produtos li:active {
+    border-color: blue;
+}
+
+.produtos li:hover h2 {
+    font-size: 35px;
+}
+
+.produtos h2 {
+    font-size: 30px;/*Tamanho da letra*/
+    font-weight: bold;/* peso em negrito*/
+}
+
+.produto-descricao {
+    font-size: 18px;
+    margin: 10px;
+    
+}
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+}
+/**/
+
+.copyright {
+    text-align: center;
+    background: url(bg.jpg);
+    padding: 40px 0;
+    color: #ffff;
+    font-size: 13px;
+}
+
+/*Estilizando a pagina contatos
+ main {
+
+}*/
+
+form {
+    margin: 40px 0;/*Colaca um espaço de 40px nas laterais do form e zero para cima e baixo.*/
+}
+
+/*Com a virgula podemos reaproveitar o estilo para outros elementos*/
+form label, form legend {/*mudamos p para legend para manter a formatação do form*/
+    display: block;
+    font-size: 20px; /*aumenta tamanho da descrição*/
+    margin: 10px 0; /*Separa a descrição do input em 10px*/
+
+}
+
+/* Essa conf separa alguns input e inclui o textarea, isso retira o display inline dos input: nome, email e telefone*/
+.input-padrao {
+    display: block; /* bloquei a linha quebrando o proximo elemento para baixo*/
+    padding: 10px 25px; /*Autera espaçamento intero entre  conteudo e borda*/
+    margin: 0 0 20px; /* margin de 20px para baixo nos input*/
+    width: 50%; /*Aumenta a largura dos inpts na metade da pagina, menos o submit*/
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar {
+    width:40%; /*largura*/
+    padding: 15px 0; /*espaçamento interno*/
+    background: orange;
+    color: white; /*cor de fonte*/
+    font-weight: bold; /*Negrito*/
+    font-size: 18px; /*Tamanho da letra*/
+    border: none; /* retira as bordas*/
+    border-radius: 5px; /*Aredonda as bordas*/
+    transition: 1s all;/* o all ativa o dalay para todos os transform*/
+    /*transition: 1s background, 1s color; dealy na transformação da cor de fundo*/
+    cursor: pointer;/*muda o curso para uma mão*/
+}
+
+/*Quando o mouse estiver por cima; hover*/
+.enviar:hover {
+   background: darkorange;
+   
+   /*transform: scale(1.2);
+   transform: rotate(70deg) scale(1.2);*/
+}
+
+/*Estilizando a tabela*/
+
+table {
+    margin: 20px 0 40px;/*conferir no console*/
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight:bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 15px 8px;
+}
+/* quando se tem varias tabelas podemos distingui-las com class e estilizar cada uma de forma diferente.*/
+
+/*Css da pagina inicial*/
+.banner {
+    width: 100%;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;/*É medida relativa proporconal ao dobro do padrao da fonte que é 16px. Sempre que tiver um titulo é interessate colocar uma margem buttom */
+    margin: 0 0 1em; /*espaçamento externo pra baixo. Em todos os paragrafos do dentro da class principal.*/
+    clear: left;/*Limpa o float quebrando seu efeito apartie desse elemento.*/
+    /*color: rgba(0, 0, 0, 0.3); cor preta declarada colm rgba com opacidade de 30% na camada alfa.*/
+}
+
+.principal {
+    width: 940px;
+    margin: 0 auto;
+    padding: 3em 0;
+    background: #fefefe;
+}
+
+.principal  p {
+    margin: 0 0 1em; /*margin button no pararagrafo*/
+
+}
+
+.principal  strong {
+    font-weight: bolder;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    float: left;/*Pesquisar o comportamento float*/
+    margin: 0 20px 20px 0;
+}
+
+.mapa {
+    padding: 3em 0;/* espaçamento interno proporcional a font*/
+    background: linear-gradient(#fefefe,  #888888);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block; /*observar sem tem algum espaço entre a ul e o img no html,se puver retirar porque interfere.*/
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.itens:before {
+    content:"\2605" ;
+}
+
+.imagem-beneficios {
+    width: 60%; /*largura relativa a pagina*/
+    opacity: 1;
+    transition: 500ms;
+    box-shadow: 10px 10px 10px 0 #000000
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.3;
+
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
+
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+       
+    }
+    nav {
+        position: static;
+    }
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+
+}

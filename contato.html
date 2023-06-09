@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contatos - Barbearia Alura</title>
+        <link rel="stylesheet" href="reset.css"><!--Essa ordem é importante. pois reseta antes do nosso css ser escrito-->
+        <link rel="stylesheet " href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="caixa">
+                <h1><img src="logo.png" alt="Lodo da Barbearia Alura"></h1>    
+                <nav>
+                    <ul><!--ul para listas não ordenadas-->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <!--Formulário simples-->
+           <form action="">
+
+            <label for="Nomeesobrenome">Nome e sobre nome</label> <!-- Coneta-se ao input e dar seu descrição-->
+            <input type="text" id="Nomeesobrenome" class="input-padrao" riquared> <!--Captura entrada de dados conectado pelos for com id.-->
+
+            <label for="email">Email</label>
+            <input type="email" id="email" class="input-padrao" riquared placeholder="samurai@dominio.com">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" class="input-padrao" riquared placeholder="(xx) x xxxx-xxxx">
+
+            <!--Formulário avançado-->
+            <label for="mensagem"></label>
+            <textarea name="" id="" cols="30" rows="10" id="mensagem" class="input-padrao" riquared></textarea>
+
+            <!--Campo de seletores com radiobox, marcador é uma bolinha.-->
+            <!--
+            <div> antes de colocar o input dentro do label:
+                <p>Como prefere nosso contato?</p>
+                <label for="radio-email">Email</label>
+                <input type="radio" value="email" name="contato" id="radio-email">
+    
+                <label for="radio-telefone">Telefone</label>
+                <input type="radio" value="telefone" name="contato" id="radio-telefone">
+    
+                <label for="radio-whatsapp">Whatsapp</label>
+                <input type="radio" value="whatsapp" name="contato" id="radio-whatsapp">
+            </div>-->            
+            <fieldset>
+                <legend>Como prefere nosso contato?</legend>
+                <label for="radio-email"><input type="radio" value="email" name="contato" id="radio-email">Email</label>
+                
+    
+                <label for="radio-telefone"><input type="radio" value="telefone" name="contato" id="radio-telefone">Telefone</label>
+                
+    
+                <label for="radio-whatsapp"><input type="radio" checked value="whatsapp" name="contato" id="radio-whatsapp">Whatsapp</label>
+                
+            </fieldset>
+            <!--input do tipo select-->
+            <fieldset>
+                <select name="" id="">
+                    <option value="">Manhã</option>
+                    <option value="">Tarde</option>
+                    <option value="">Noite</option>
+                </select>
+            </fieldset>
+
+            <!--Campo de checkbox, marcador é um visto-->
+            <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+
+            <input type="submit" value="Enviar formulário" class="enviar">
+           </form>
+           <!--criando uma tabela-->
+           <table>
+               <!-- Cabeçalho-->
+               <thead>
+                    <tr><!--1º linha head -->
+                        <th>Dia</th><!--1º celula-->
+                        <th>Horário</th><!--2º celula-->
+                    </tr>
+                </thead>
+
+                <!--Corpo da tabela-->
+                <tbody>
+                    <tr>
+                        <td>Segunda</td>
+                        <td>8h~20h</td>
+                    </tr>
+                    <tr>
+                        <td>Terça</td>
+                        <td>8h~20h</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta</td>
+                        <td>8h~20h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer class="copyright">
+            <img src="logo-branco.png" alt="Lodo da Barbearia Alura"">
+            <p> &copy; Copyright Barbearia Alura - 2019</p>
+        </footer>
+    </body>
+</html>
+
+<!---=========================================-CURSO HTML5 CSS3 part:3==========================================-->
+
+    <!--CAPITULO 1: Criando nova pagina:
+
+Criar agora o arquivo contatos.html, reaproveitar o código da pagina produtos descartando o main.
+Atualizar o titulo da pagina criada, trocar o nome das folhas de estilo de ""style.css para home-style.css" e produtos.css para style.css" .
+Feito isso, é preciso fazer as mesma auterações nas paginas html também.
+Lembrando que a principal filha de estlilo é reaproveitada em varias paginas e recebe o nome de style.css. Que será também a folha css da pag contato. O codigo está organizado e pronto para iniciar.
+
+Os formularios existem para capturar informações dos usuário e passar para um servidor tratar essas informações, tipo fazer login, enviar email, retornar pesquisas.-->
+   
+    <!--CAPITULO 2: Começando um formulário:
+A tag do formulario é a <form> dentro dela teremos os input para capturar dados, <input type="text"> e um <label> para dar uma descrição ao input. Marcamos o input com um id por que a informção de entrada é unica  e conectamos ao label por meio do atributo name="".
+    Criamos dentro do form, inputs para capturar nome, email, telefone do usuário e o botão com input submit "Enviar" para enviar o formulário podemos auterar esse nome aplicando um value="" ao input. Essa é a estrutura básica de um form.
+
+    Estilizando a pagina:
+    Colocando width na 940px que segue o padão das outras paginas, e margin: 0 auto.
+
+    DICA: Quando queremos centralizar uma div sempre colocamos sua largura e margen automáticas para os lados. já um conteudo usamos text-align center.
+
+    Agora damos um espaçamento superior e inferior de 40px no form para descolar o conteudo.
+    Sabemos que todo elemneto tem um display, inline "deixa adicionar elemento ao seu lado" ou block " Comportamento contrario, mesmo não ocupando toda a linha." precisamos organizar o conteúdo um abaixo do outro modificando seu display.
+
+    Resumo: Nesta aula, aprendemos:
+
+A criar um formulário HTML
+A tag que o representa é a <form>
+A tag <input>, para a entrada de dados do usuário
+A criar uma etiqueta para o input, com a tag <label>
+A conectar um input com o seu label
+Colocamos um id para o input e associamos esse id ao atributo for do label
+Alguns tipos de input, como text e submit
+Que label possui o display inline e o input possui display inline-block
+A estilizar o nosso formulário.    -->
+
+    <!--CAPITULO 3: Tipo de campos diferentes:
+    
+    Vamos avançar incederindo inputs mais complexos: O text-area é um campo de texto tipo mensagem.
+    
+    O radiobox são campo selecionáveis, que tem varias opções mas deve ser configurado para aceitar apenas um deles, criando as opções: email, telefone e Whtasapp e para marcar apenas uma das opções, adicionamos a propriedade name nos 3 inputs assim só é possivel marcar uma das 3.
+
+    O checkbox tem selecionador tipo visto, nesse configuramos o intput dentro do label para evitar colocar for e id mas manter o mesmo efeito de ligaçao; com html pronto vamos ao css.
+
+    Ainda no html no tipo radiobox colocamos os inputs dentro da tag label para que o seletores fique antes da descrição, a exibição deles ainda ficará bagunçada por que estilizamos com display block todos os input, e para arrumar precisamos separa-los dos demais, resolve-se isso colocando uma class para separar as conf. de input que envolvem o raqdiobox, aplicamos a class= input-padrao no input simplificado.
+
+display: inlane { Só aceita um elemento por linha, não coloca elementos lado a lado}
+display: block { aceita colocar elementos lado a lado mas exige uma largura dos elementos}
+
+    A hierarquia dos seletores: inline = 1000, id =100, class =10, tag =1, quando maior o peso do seletor este será aplicado pelo css, mas podemos fazer combinações somando os pesos para aumentar a força do seletor como exemplo form p: Todos os paragrafos do form teram o tag + p <=> 1 + 1 = 2. e assim por diante e respeitada a hierarquia.
+
+    Adicionando um dropdow, um lista de opções que ficam escondidas, com a tag pai <select> e a filho <option> para as opçoes disponiveis.
+
+    Resumo: Nesta aula, vimos:
+
+    O textarea, para entradas de texto de mais de uma linha
+    O input do tipo radio
+    Como agrupar vários input do tipo radio, impedindo que mais de um input seja selecionado
+    O input do tipo checkbox
+    Que podemos criar um input dentro de um label, assim associando-os
+    Mais estilizações para a nossa página
+    Como funciona a hierarquia no CSS
+    O select, que é seletor, um campo de seleção de um item, e o option, que representa cada opção do seletor
+-->
+
+    <!--CAPITULO 4: Melhorando a semantica:
+
+    Para pesquisar site: mobile input types. Tipos de input para celurar: text, email, tel, number, passoword, data, date time, mouth "mes", search esse são os tipos básicos.
+    para transformar o preenchimento de um input obrigatorio atribuimos como propriedade a palavras required, assim o usuario é nao pode deixar o campo em branco.
+    É importante colocar tipo de text correto no navegador, pois ele auxilia o usuário a colocar as informações correta no formulario.
+    para melhorar ainda mais podemos colocar uma sugestão, com placehold escrevemos um texto sugestivo no campo que sera substituido pela informação do usuário.
+    no campo radiobox também para sugerir um seletor usamos o checked, fazemos isso para pre marcar o whatsapp.
+    O formulario está pronto com div e paragrafos porém existe outra forma melhor de deixa-lo mais semantico.
+
+    Agora melhorando a sematica, usamos ao invez de div o <fieldset> para agrupar os dados. e para titulo não usamos paragrafod e sim o <legend> quando fizermos isso no html pederemos a formatação por que o no css estava marcado com p e agora é legend.
+        Para melhorar a assecibilidade colocamos um alt nas imagens de logo e rodapé.
+
+        Resumo: Nesta aula, aprendemos:
+
+Alguns tipos de inputs para celular: email, tel, number, password, date, datetime, month e search
+Como não permitir que um campo não seja preenchido, através do atributo required
+Como exibir uma sugestão de preenchimento para os campos, através do atributo placeholder
+Como deixar uma opção marcada por padrão nos nossos input radio e checkbox, através do atributo checked
+Como estruturar melhor o nosso código com fieldset e legend
+Como adicionar uma alternativa à imagem, descrevendo-a, com o atributo alt
+    -->
+
+    <!--CAPITULO 5: Css avançado:
+    Configurando agora o botao de submit,marcamos ele com a class= enviar para criar os eu estilo no css: descrição no proprio css.
+
+    Transform scale (1.2) aumenta o elemento em 20% e transform rotate(70deg) faz o elemento girar em 70grau, com isso temos inumeras opção de transformação. para fazer os 2 efeitos ao mesmo tempo aplicamos em uma mesma linha "transform: rotate(70deg) scale(1.2)" e aplicamos no trasition depois do delay o all, que transforma o todos os transform ao mesmo tempo, do contrario o 1º transform será ignorado funcionando apenas o ultimo declarado.
+
+    resumo:
+    Nesta aula, aprendemos:
+
+    Como estilizar o botão de envio de formulário
+    A realizar transições nos nossos elementos, com a propriedade CSS transition
+    A modificar o estilo do ponteiro do mouse, quando passar por cima de determinado elemento, através da propriedade CSS cursor
+    A realizar transformações nos nossos elementos, como aumentar proporcionalmente a escala de determinado elemento ou rotacioná-lo, através da propriedade CSS transform
+    -->
+
+    <!--CAPITULO 6: Estrutura de tabela:
+    Vamos criar agora uma tabela com a tag <table>; a <tr> marca uma linha e cada celular e marcada com <td> e para aumentar ela é só criar mais tr e dentro dela as tds.
+        Para deixa nossa tabela com semantica apropriada usamo a tag <thead> para marcar o cabeçalho a linha permance como <tr> mas a celular dentro do thead usa-se o <th> e para o corpo usamos <tbody> com a quantidade de <tr> e <td> necessaria. também temos o <tfooter> que é o roda pé das tabelas.
+
+    As tabelas também nos oferecem a possibilidade de juntar células e montar um visual diferente. Por exemplo, quando uma linha, que deveria ter 5 células, passa a mostrar só "uma célula".
+
+Esse efeito é conseguido através da propriedade colspan=X, onde X é o número de células que você quer agrupar.
+
+Portanto, em uma tabela de 5 colunas, para ter uma célula única na linha, usamos um código assim:
+
+<tr>
+    <td colspan="5">Rio de Janeiro</td> 
+</tr>COPIAR CÓDIGO
+Experimente na sua página para ver o resultado!
+
+    Resumo: Nesta aula, aprendemos:
+
+A criar uma tabela HTML
+A tag table, que representa a tabela
+A tag tr, que representa a linha da tabela
+A tag td, que representa a célula da tabela
+A tag thead, que representa o cabeçalho da tabela
+A tag tbody, que representa o corpo da tabela
+A tag th, que representa a célula do cabeçalho da tabela
+A tag tfoot, que representa o rodapé da tabela
+A estilizar a tabela
+    -->
+
+

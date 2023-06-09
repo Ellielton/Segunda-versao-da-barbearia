@@ -1,0 +1,136 @@
+<!--  -----------------------------------------------Capítulo 1: Marcação do primeiro texto -------------------------------------------------------    -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Barbearia Alura </title>
+        <link rel="stylesheet" href="style-home.css">
+
+    </head>
+    <body>
+        <header>
+            <h1 class="titulo-principal">Barbearia Alura</h1>
+        </header>
+        <img id="banner" src="banner.jpg">
+        <div class="principal">
+            <h2 class="titul0-centralizado">Sobre a Barbearia Alura</h2>
+    
+            <p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+    
+            <p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
+    
+            <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+
+        </div>
+        <div class="beneficios">
+            <h3 class="titul0-centralizado">Benefícios</h3>
+            <ul>
+                <li class="itens">Atendimento aos Clientes</li>
+                <li class="itens">Espaço diferenciado</li>
+                <li class="itens">Localização</li>
+                <li class="itens">Profissionais Qualificados</li>
+            </ul>    
+            <img src="beneficios.jpg" class="imagembeneficio">
+
+        </div>
+    </body>
+</html>
+<!---=========================================-CURSO HTML5 CSS3 part:1==========================================---->
+
+<!--  -----------------------------------------------Capítulo 1: Marcação do primeiro texto -------------------------------------------    -->
+<!-- HTML significa linguagem de marcação de texto. Organizando o texto com as tag:
+<h1></h1> titulo que tem 6 niveis.
+<p></p> que faz a marcação de paragrafos.
+<strong></strong> marca um texto como negrito, isso serve pra dar importancia a um conteudo.
+<em></em> marca o texto em italico. 
+
+EM resumo marcamos a barbearia alura como uma parte importante do texto com a tag strong
+deu enfase em paragrafo inteiro colocando em italico e ainda damos mais importancia deixando parte desse paragarfo em negrito,
+usamos as tag <p> com dentro dela a tag <em> e dentro a tag <strong> uma tag dentro da outra, isso é normalmente feito no html  -->
+
+    <!--Uma introdução ao HTML e às suas tags
+Como definir o título e os parágrafos de um texto
+Utilizando as tags <h1> e <p>, respectivamente
+Como dar destaque para algumas informações do texto, deixando-as em negrito, utilizando a tag <strong>
+Como dar ênfase para algumas informações do texto, deixando-as em itálico, utilizando a tag <em>-->
+
+
+<!--  -----------------------------------Capítulo 2: Separando conteúdos e informações----------------------------------------------------    -->
+
+<!--Usamos a tag !DOCTYPE para dizer ao navegavdor que a versao html usada e a versao 5, por padrao a escrita e em maiúscula porem a outras tag sao miúsculas e recebe ! no inicio para indicar ao navegador que essa é a tag doctype e por fim colocamos html com isso dizemos que estamos usando a ultima versão que está carretgada com varios novos recursos salvo e recarregando isso nao acontece nada no visual da paguna criada, mas internamente aconteceu uma grande mudanças na pagina e Apos isso colocamos mais uma tag, a <thml> essa é estrutuaral e serve para marcar todo o conteúdo da pagina e por isso recebe o seu fechamento ao final de todo o conteudo </html>
+Para facilitar a leitura do codigo usa-se a identação com tab.
+
+Se o sistema do usuario estiver configurando em outro idioma ao que a pagina foi escrita vai acontecer problemas de acentuação gráfica e podemos resolver esses problemas com a tag <meta charset //Aqui é conjunto de caracteres ="UTF-8" // e aqui o dicionario que se encontra o conjunto alem disso informamos no codigo qual a linguaguem estamos usando na tag html adiconando <html lang= pt-br></html> agora colocamos um titulo para a aba do navegador com a tag <title>, usamos algumas tags de informçao que não reagem a exibição da pagina e servem apenas para o navegador.
+    Para organizar essa infomações usamos mais duas tag <head> "cabeça" que recebe as infomaçoes para o navegador e <bory>"corpo" que recebe as informações de exibição. 
+        resumo:
+    Nesta aula, aprendemos:
+
+A definir a estrutura básica do HTML
+Com a tag DOCTYPE, definimos qual versão do HTML estamos utilizando
+A tag <html>, que marca o conteúdo a ser renderizado no navegador
+Dentro desta tag, podemos definir a linguagem da página, através da propriedade lang
+Como passar as informações do encoding da nossa página para o navegador, através da tag <meta> e da propriedade charset
+Como definir o título de uma página, através da tag <title>
+Como separar as informações que estão sendo passadas para o navegador, utilizando a tag <head>
+Como separar o conteúdo da página, utilizando a tag <body> -->
+
+    <!--  -----------------------------------------------Capítulo 3:Trabalhando com css -----------------------------------------------    -->
+
+<!--Na aula passada mechemos na estrutura da pagina, agora vamos ver a apresentação visual dos texto que temos, inicialmente fizemos isso com as tag mas elas tem outra finalidade e não de apresentação, para isso usamos o css que folha de stylo em casata que configura as propriedades para sem apresentados. estilo caswcata quer dizer que as propriedades de um elemente infçuencias todos os outros que estao abaixo dele.
+Estilizano o paragrago nossa missão:
+    <p style="font-size: 20px" e com ; podemos adicionar novas propriedades ao mesma tag> o padrao da fonte do navegador é 
+px e com isso mudamos ela para 20px.
+-->
+
+
+<!--Existe 3 formas de aplicar o css, já usamo a inline que diretamente nas tag, agora dentro do head vamos usar a tag <style> p{ text-align: center}</style>para obtermos o mesmo efeito.Porém desta forma todos os paragrafos teram o memso estilo aplicado, mas existe a 3 forma que a mais comum, que é criar um arquivo externo com todo css da exibição e linkar com a pagina index no head atravez da tag <link rel="stylesheet href="style.css"> e para que cada tag tenha sua estilização propria podemos usar seletores e assim cada tag recebe seu estilo. dessa também podemos usar esse estilo em qualquer outra pagina apenas criando o link. Para adicionar uma cor de fundo cinsa preciso declarar background: #cccccc mas aplicando isso ao elemento na vai ficar uma boa exibiçao pois exitem espaçamentos entre os elemento para melhorar isso essa propriedade deve ser aplicada no corpo do html que recebe todo o conteudo da pagina. Outra forma de selecionar uma tag é buscar a primeira a quem está envolve e depois a que queremos adicionar o estilo. obs: organizamos as informações do arquivo css na obedecendo a ordem estrutal do aqueivo html.
+    Sobre cores:
+    o alfabeto na combutação e diferente temos:
+    o binario = 01
+    numerico = 0123456789;
+    temos o também o dicionario hexadecimal que é 0123456789ABCDEF, com ele podemos representar muito mais cores que o dicionario numerico, e é o que usamos pra marcar as cores. Nos conseguimos ver 3 espectro de cor o RGB ou Red, Green, Blue. Para isso usamos uma traga "#" e 6 elementos: #_ _  _ _  _ _  sendo 0 = ausencia de cor e F = máximo de cor.
+    representamos o preto assim: #00 00 00, ou branco #ffffff. Outra forma de representar as cores além dos nomes em ingles, temos a linguagem exadecimal e o alfabeto RGB que vai do 0...255, são 256 niveis de representação de cada cor, sendo 0 = ausencia e 255=maximo. Representamos com rgb ( , , ) sendo o branco rgb(255,255,255).
+    
+    <!--Nesta aula, aprendemos:
+        
+        A mexer na apresentação dos textos
+        No alinhamento deles (text-align)
+        No tamanho da fonte (font-size)
+Na cor de fundo (background)
+Na cor do texto (color)
+CSS inline
+Na linha onde temos a nossa tag, adicionamos a propriedade do CSS
+A tag <style>
+    Dentro da tag, podemos colocar marcações de CSS referentes aos elementos que temos no nosso HTML
+    A apresentação do CSS com um arquivo externo
+    Como funciona o estilo em cascata do CSS
+    Como importar um arquivo externo de CSS dentro da nossa página HTML
+    Como representar cores no CSS
+    Através do nome da cor
+    Através do seu hexadecimal
+    Através do seu RGB
+    Nesta aula, começamos a mexer na apresentação dos textos, no alinhamento deles e no tamanho da fonte. Na próxima, vamos ver como fazer isso em grandes quantidades de texto e de forma muito mais organizada. Te espero lá.
+    
+-->
+<!--  -----------------------------------------------Capítulo 4: Estilizando imagens -------------------------------------------------------    -->
+<!--Colocando um id no paragrafo. No aquivo css usamos os nomes das tag, mas para colocar os estilos em elementos especificos marcamos ele com id no html e referenciamos ele com #nome para estilizalo.
+Vamos melhorar nosso codigo adicionando uma imagem na pagina. como ela é um elemento externo devemos colocar seu endereço. já que a imagem vai ser exibida no topo da pagina colomos sua tag de marcação acima do h1: <img src="". Vamos colocar o id banner na imagem para manipular sua estilizaçao no arquivo css.
+usando developer tools para inspecionar os elementos na pagina. as dimensões dos elementos envolve a altura e larguara, e espaços internos e externos.
+
+width = largura; height = altura; paddig = espaçamento interno e margin = espaçamento esterno-->
+
+<!--  --------------------------------Capítulo 5:Lisata e divisão de conteúdo----------------------------------------------    -->
+
+<!--Criando a secção beficio e uma lista nao ordenada, sáo 2 tipos de lista as nao ordenadas "ul" e ordenadas "ol" na estilização da lista surge um problema, para idenficar no arquivo css a lista podemos usar o nome da tag porém todos o elementos iram ficar com as mesma propriedades, podemos também usar o id, porém temos que marcar todos os elemetos para aplicar as propriedades e para resolver isso usamos as class e usamos .seguido do nome para referencia-la no css.
+A diferença de colocar um conteudo em negrito atravez da tag strong do mesmo conteudo com a mesma aprencia com recurso do css é que no primeiro caso existe o significado estrutural e no segundo caso é apenas visual e existe relevancia estrutural da pagina com o conteudo, o que são situaçõs muitos distintas e relevantes para indexçação da pagina.
+    Criando uma 2 divisões na pagina uma para o conteudo principal e outra para a secção benefícios usando as tag <div></div>, centralizando o h2 e inserindo mais uma imagem nesta segunda secção.
+OS elemento tipo block acupa toda a linha mesmo que seu conteudo seja pequeno deixando um espaço vazio na apresentação, já do tipe inline não aceita alteração nos espaçamentos interno e externo. existe uma terceira caracteristica que é que a junção dos dois ultimos ou seja inlne-block dessa forma posso colocar elementos lado a lado e alterar seus espaçamentos. Para alinhar o conteudo no topo usamos o vertical-align: top 
+
+<!--  -----------------------------------------------Capítulo 6:Finalizando a pagina ----------------------------------------------------    -->
+<!--Criando o cabeçalho da pagina onde fica o conteúdo mais importante do nosso site usando a tag header logo abaixo do body, podemos aqui marcar o texto com h1 por ser o texto principal devido a essa configuração deve-se reajustar os hs entõa organizamos eles com css usando uma class para os dois já  que ambos tem os mesmo estilos de exibição.Usamos um margin de 20px para descolar o texto da margem esqueda da pagina.
+FIM  -->
+
+
+
+
